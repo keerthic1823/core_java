@@ -22,7 +22,7 @@ A multi-gateway payment example (Credit Card, UPI, NetBanking) showing runtime p
 
 ## Polymorphism – Overloading
 
-Shows compile-time polymorphism by defining multiple methods with the same name but different parameter lists (varying count, type, or order).
+Shows compile-time polymorphism by defining multiple methods with the same name but different parameter lists (varying count, type, or order). Also demonstrates the compiler's overload resolution order — exact match, then widening, then autoboxing, then varargs — only one type of match is possible at a time.
 
 **Files:** `MOL.java`
 
