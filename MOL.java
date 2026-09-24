@@ -46,7 +46,15 @@ public class MOL {
     static void varargsOnly(int... nums) {
         System.out.println("VARARGS: varargsOnly(int...) called, count=" + nums.length);
     }
-
+// ---- Check 6:Ambigious-----------------------------------------------------------------
+ static void test(long a, int b) { 
+		System.out.print("long,int called");
+	}
+	
+	static void test(int a, long b) {
+		
+		System.out.print("int,long called");
+	}
     public static void main(String[] args) {
         System.out.println("--- Check 1: exact match wins even with others available ---");
         add(2, 3);
@@ -62,6 +70,9 @@ public class MOL {
 
         System.out.println("--- Check 5: varargs is the last resort ---");
         varargsOnly(2, 3, 4, 5);
+     
+        System.out.println("--- Check 6: Ambigious ---");
+       // test(5,5);(Compile time error:The method test(long, int) is ambiguous for the type AmbiguousOverloadTest) 
     }
 }
 
